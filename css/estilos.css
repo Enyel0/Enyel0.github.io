@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --mainfont: "Poppins", Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--mainfont);
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    padding: 0px 14px;
+
+    background: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+/* MENU DESPLEGABLE */
+
+.nav-list {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 90;
+
+    width: 80%;
+    height: 100vh;
+
+    padding-top: 40px;
+    padding-left: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #000;
+
+    transition: right .3s;
+}
+
+.nav__active {
+    right: 0;
+
+}
+
+.nav-list .links {
+    /* background: yellowgreen; */
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    padding: 15px 0px;
+}
+
+.nav-list .links a {
+    text-decoration: none;
+    color: #fff;
+
+    font-size: 30px;
+    font-weight: 800;
+
+}
+
+.nav-list .links a:hover {
+    color: #1DB954;
+}
+
+.nav-list .login {
+    width: 130px;
+    /* background: violet; */
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 15px 0px;
+
+    border-top: 1px solid #fff;
+}
+
+.nav-list .login a {
+    text-decoration: none;
+    color: #fff;
+
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.nav-list .login a:hover {
+    color: #1DB954;
+}
+
+
+.capa-gris {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    z-index: 80;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.350);
+
+    transition: right .3s;
+}
+
+.capa-gris__active {
+    right: 0;
+}
+
+
+
+
+/* MENU DESPLEGABLE */
+
+
+
+
+
+
+
+/* MENU HAMBURGESA */
+
+
+.menu-bars {
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+
+    position: relative;
+    z-index: 100;
+}
+
+.menu-bars span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    transition: all .3s;
+}
+
+
+
+
+.active__line1-bars {
+    transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.active__line2-bars {
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.active__line3-bars {
+    transform: rotate(-45deg) translate(-2px, 1px);
+}
+
+
+/* MENU HAMBURGESA */
+
+
+
+/* MUSIC FOR EVERYONE */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+
+    background: linear-gradient(180deg, rgba(244, 117, 123, 1) 0%, rgba(245, 136, 110, 1) 100%);
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 20px;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.hero__cta {
+    background: #44e3bb;
+}
+
+.hero__cta:hover {
+    background: #1DB954;
+}
+
+.cta {
+    text-decoration: none;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    padding: 16px 48px;
+    text-align: center;
+    border-radius: 50px;
+
+}
+
+
+/* MUSIC FOR EVERYONE */
+
+
+
+/* GET PREMIUM */
+
+
+.get-premium {
+    width: 100%;
+    height: 500px;
+    margin: 40px 0;
+
+    background: #498172;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.get-premium__paragraph2 {
+    font-size: 10px;
+
+
+}
+
+.get-premium__cta {
+    background: #ffcdd2;
+    color: #498172;
+
+    font-size: 15px;
+
+    margin: 15px 0px;
+}
+
+/* GET PREMIUM */
+
+
+/* FINAL */
+
+.footer {
+    width: 100%;
+    background: #000;
+}
+
+.grid-footer {
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    padding: 60px 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "logo logo"
+        "company comunities"
+        "helpful helpful"
+        "social social"
+    ;
+    gap: 15px;
+    /* background: #ffcdd2; */
+}
+
+.logo-footer {
+    grid-area: logo;
+}
+
+.logo-footer img {
+    width: 50px;
+}
+
+.logo-footer a {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.grid-item h4 {
+    color: #919496;
+}
+
+.grid-item a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.grid-item a:hover {
+    color: #1DB954;
+}
+
+.company {
+    grid-area: company;
+}
+
+.comunities {
+    grid-area: comunities;
+}
+
+.helpful-links {
+    grid-area: helpful;
+}
+
+.social-icons {
+    grid-area: social;
+    width: 100%;
+    /* background: #1DB954; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-icons a {
+    display: inline-block;
+    background: #222326;
+    padding: 10px 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a:hover img {
+    fill: #1DB954;
+}
+
+/* FINAL */
+
+
+/* DESKTOP DESING */
+
+@media screen and (min-width:768px) {
+
+    header {
+        background: rgba(0, 0, 0, 0.6);
+
+        justify-content: space-around;
+    }
+
+    .hero {
+        height: 500px;
+    }
+
+    .menu-bars {
+        display: none;
+    }
+
+    .capa-gris {
+        display: none;
+    }
+
+    .nav-list {
+        position: relative;
+        width: auto;
+        height: auto;
+        right: 0;
+        flex-direction: row;
+
+
+
+        padding-top: 0px;
+        padding-left: 0px;
+
+        background: transparent;
+    }
+
+    .nav-list .links {
+        flex-direction: row;
+        gap: 10;
+        padding: 0px 10px;
+    }
+
+    .nav-list .links a {
+        text-decoration: none;
+        color: #fff;
+
+        font-size: 15px;
+        font-weight: 700;
+
+    }
+
+    .nav-list .login {
+        width: auto;
+        flex-direction: row;
+        gap: 10;
+        padding: 0px 10px;
+        border-top: none;
+        border-left: 1px solid #fff;
+    }
+
+    .nav-list .login a {
+        text-decoration: none;
+        color: #fff;
+
+        font-size: 15px;
+        font-weight: 700;
+
+    }
+
+    .nav__active {
+        right: 0;
+
+    }
+
+
+    .get-premium {
+        width: 90%;
+
+        margin: 50px auto;
+    }
+
+    .grid-footer {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        padding: 60px 0;
+
+        overflow-y: hidden;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+        grid-template-areas:
+            "logo company comunities helpful social"
+        ;
+        gap: 20px;
+
+        /* background: #ffcdd2; */
+    }
+
+    .logo-footer {
+        grid-area: logo;
+        align-items: flex-start;
+    }
+
+    .company {
+        grid-area: company;
+    }
+
+    .comunities {
+        grid-area: comunities;
+    }
+
+    .helpful-links {
+        grid-area: helpful;
+    }
+
+    .social-icons {
+        grid-area: social;
+        align-items: flex-start;
+    }
+
+}
+
+
+
+/* DESKTOP DESING */
